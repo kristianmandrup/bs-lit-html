@@ -53,11 +53,17 @@ Currently only includes a binding to the `html` and `render` function for render
 open LitHtml;
 module D = Webapi.Dom;
 module Doc = D.Document;
-let appElement = Doc.getElementById("app", D.document)
+let appElement = Doc.getElementById("app", D.document);
 
-let name = "Jane";
-let hello = html({j|<div>Hello $name</div>|j}, ());
-render(hello, appElement)
+exception NoSuchElement;
+
+let write = () => {
+  let hello = html([%bs.raw "html`blablah`"]);
+  switch (appElement) {
+  | Some(appElement) => render(hello, `element(appElement))
+  | None => raise(NoSuchElement)
+  };
+};
 ```
 
 ## State management

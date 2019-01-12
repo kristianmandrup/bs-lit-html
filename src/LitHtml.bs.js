@@ -2,18 +2,15 @@
 'use strict';
 
 
-var Element = /* module */[];
-
-var DocumentFragment = /* module */[];
-
 var Partial = /* module */[];
 
 var RenderOptions = /* module */[];
 
 var TemplateResult = /* module */[];
 
-exports.Element = Element;
-exports.DocumentFragment = DocumentFragment;
+var D = 0;
+
+exports.D = D;
 exports.Partial = Partial;
 exports.RenderOptions = RenderOptions;
 exports.TemplateResult = TemplateResult;

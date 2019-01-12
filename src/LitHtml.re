@@ -17,8 +17,8 @@ external render:
   (
     TemplateResult.t,
     [@bs.unwrap] [
-      | `element(D.Element)
-      | `documentFragment(D.DocumentFragment)
+      | `element(D.Element.t)
+      | `documentFragment(D.DocumentFragment.t)
     ],
     ~options: Partial.t(RenderOptions.t)=?,
     unit

@@ -5,12 +5,14 @@ let appElement = Doc.getElementById("app", D.document);
 open Jest;
 open LitHtml;
 
+exception NoSuchElement;
+
 let name = "Jane";
 let write = () => {
   let hello = html([%bs.raw "html`blablah`"]);
   switch (appElement) {
   | Some(appElement) => render(hello, `element(appElement))
-  | None => Js.log("no element to render on ")
+  | None => raise(NoSuchElement)
   };
 };
 
