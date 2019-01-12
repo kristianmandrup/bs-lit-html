@@ -4,12 +4,15 @@ module Element = {
 module DocumentFragment = {
   type t;
 };
+
 module Partial = {
   type t('a);
 };
+
 module RenderOptions = {
   type t;
 };
+
 module TemplateResult = {
   type t;
 };

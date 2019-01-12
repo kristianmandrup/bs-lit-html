@@ -6,9 +6,10 @@ open Jest;
 open LitHtml;
 
 let name = "Jane";
-let write = () =>
-  let hello = html({j|<div>Hello $name</div>|j}, ());
+let write = () => {
+  let hello = html([%bs.raw {|<div>Hello $name</div>|}]);
   render(hello, appElement);
+};
 
 open Expect;
 

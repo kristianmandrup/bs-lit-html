@@ -4,5 +4,5 @@ module Doc = D.Document;
 let appElement = Doc.getElementById("app", D.document);
 
 let name = "Jane";
-let hello = html({j|<div>Hello $name</div>|j}, ());
+let hello = html([%bs.raw {|<div>Hello $name</div>|}]);
 render(hello, appElement);
