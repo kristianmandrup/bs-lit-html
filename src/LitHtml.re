@@ -30,3 +30,7 @@ external render:
   ) =>
   unit =
   "";
+
+type templateLiteral;
+[@bs.send] external html: templateLiteral => TemplateResult.t = "";
+[@bs.send] external svg: templateLiteral => TemplateResult.t = "";
