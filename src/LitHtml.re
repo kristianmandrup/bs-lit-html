@@ -1,9 +1,4 @@
-module Element = {
-  type t;
-};
-module DocumentFragment = {
-  type t;
-};
+module D = Webapi.Dom;
 
 module Partial = {
   type t('a);
@@ -22,8 +17,8 @@ external render:
   (
     TemplateResult.t,
     [@bs.unwrap] [
-      | `element(Element.t)
-      | `documentFragment(DocumentFragment.t)
+      | `element(D.Element)
+      | `documentFragment(D.DocumentFragment)
     ],
     ~options: Partial.t(RenderOptions.t)=?,
     unit
