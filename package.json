@@ -1,0 +1,33 @@
+{
+  "name": "bs-lit-html",
+  "version": "0.1.0",
+  "description": "lit-html bindings for ReasonML",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "test": "jest"
+  },
+  "keywords": [
+    "lit-html",
+    "lit",
+    "reason"
+  ],
+  "author": "Kristian Mandrup",
+  "license": "MIT",
+  "files": [
+    "src/LitHtml.re",
+    "bsconfig.json"
+  ],
+  "peerDependencies": {
+    "lit-html": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "bs-platform": "^4.0.18",
+    "jest": "^23.6.0",
+    "@glennsl/bs-jest": "^0.4.6"
+  },
+  "dependencies": {
+    "bs-webapi": "^0.13.1"
+  }
+}
