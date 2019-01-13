@@ -1,7 +1,7 @@
 {
   "name": "bs-lit-html",
   "version": "0.1.0",
-  "description": "lit-html bindings for ReasonML",
+  "description": "Bucklescript bindings for lit-html",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
@@ -11,7 +11,8 @@
   "keywords": [
     "lit-html",
     "lit",
-    "reason"
+    "Bucklescript",
+    "ReasonML"
   ],
   "author": "Kristian Mandrup",
   "license": "MIT",
